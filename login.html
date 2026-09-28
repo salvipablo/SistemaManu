@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cons 0.1</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/generals.css">
+  <link rel="stylesheet" href="./css/login.css">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+</head>
+<body>
+
+  <header>
+    <h1 class="mainTitle mb-1 textAlignCenter">Ingreso al sistema.</h1>
+  </header>
+
+  <!--#region frmLogin -->
+    <section class="cntFrmLogin">
+      <label for="user">Usuario:</label>
+      <input type="text" name="user" id="userName" class="inputs mb-1">
+
+      <label for="pass">Contraseña:</label>
+      <input type="password" name="pass" id="userPassword" class="inputs mb-1">
+
+      <button class="btnLogin" id="btnLoginButton">Ingresar</button>
+    </section>
+  <!--#endregion frmLogin -->
+
+  <!--#region modal window notice -->
+    <section class="cntModalWinNotice cntModalWinNotice-noShow" id="cntModalWinNotice">
+      <div>
+        <div><h2 class="textAlignCenter">Aviso</h2></div>
+      </div>
+
+      <div>
+        <div>
+          <h3 class="textAlignCenter" id="txtModalNotice">-</h3>
+          <button class="btnAccept" id="btnAccept">Aceptar</button>
+        </div>
+        <div>
+          <img src="./images/forbidden.png" alt="imgForbidden" class="imgModalWinNotice">
+        </div>
+      </div>
+    </section>
+  <!--#endregion modal window notice -->
+
+  <script type="module" src="./js/login.js"></script>
+</body>
+</html>

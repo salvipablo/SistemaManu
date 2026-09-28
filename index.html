@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cons 0.2</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/generals.css">
+  <link rel="stylesheet" href="./css/index.css">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+</head>
+<body>
+  <!--#region Navigation menu and icons -->
+  <header>
+    <div>
+      <h1>Cons 0.1</h1>
+    </div>
+
+    <div>
+      <nav>
+        <div class="cnt_icon-nav">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-folder-plus">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M12 19h-7a2 2 0 0 1 -2 -2v-11a2 2 0 0 1 2 -2h4l3 3h7a2 2 0 0 1 2 2v3.5" />
+            <path d="M16 19h6" />
+            <path d="M19 16v6" />
+          </svg>
+        </div>
+
+        <div class="cnt_icon-nav">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-folder-open">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M5 19l2.757 -7.351a1 1 0 0 1 .936 -.649h12.307a1 1 0 0 1 .986 1.164l-.996 5.211a2 2 0 0 1 -1.964 1.625h-14.026a2 2 0 0 1 -2 -2v-11a2 2 0 0 1 2 -2h4l3 3h7a2 2 0 0 1 2 2v2" />
+          </svg>
+        </div>
+
+        <div class="cnt_icon-nav icon-disabled">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-device-floppy">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M6 4h10l4 4v10a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2" />
+            <path d="M10 14a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+            <path d="M14 4l0 4l-6 0l0 -4" />
+          </svg>
+        </div>
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-dots-vertical">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M11 12a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+          <path d="M11 19a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+          <path d="M11 5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+        </svg>
+
+        <div class="cnt_icon-nav">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-settings">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065" />
+            <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+          </svg>
+        </div>
+
+        <div class="cnt_icon-nav">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-database-import">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M4 6c0 1.657 3.582 3 8 3s8 -1.343 8 -3s-3.582 -3 -8 -3s-8 1.343 -8 3" />
+            <path d="M4 6v6c0 1.657 3.582 3 8 3c.856 0 1.68 -.05 2.454 -.144m5.546 -2.856v-6" />
+            <path d="M4 12v6c0 1.657 3.582 3 8 3c.171 0 .341 -.002 .51 -.006" />
+            <path d="M19 22v-6" />
+            <path d="M22 19l-3 -3l-3 3" />
+          </svg>
+        </div>
+
+        <div class="cnt_icon-nav">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-mail">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10" />
+            <path d="M3 7l9 6l9 -6" />
+          </svg>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!--#endregion Navigation menu and icons -->
+
+  <!--#region Secciones desplegables -->
+  <section class="cnt_drop-downBoxes">
+    <div class="cntSectionDropMat">
+      <div>
+        <h2>Materiales</h2>
+        <div class="cnt_iconDrop" id="iconCntMaterialsDown">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-up">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M6 15l6 -6l6 6" />
+          </svg>
+        </div>
+        <div class="cnt_iconDrop cnt_iconDrop-noShow" id="iconCntMaterialsUp">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M6 9l6 6l6 -6" />
+          </svg>
+        </div>
+      </div>
+      <div id="cntMaterials" class="cntMaterials">
+        <div class="proveedores-lista">
+          <div class="proveedor">
+            <div class="proveedor-imagen">
+              <img src="https://picsum.photos/100/100?random=1" alt="Proveedor 1">
+            </div>
+
+            <div class="proveedor-info">
+              <p class="proveedor-descripcion">
+                Descripción breve del producto.
+              </p>
+
+              <h3 class="proveedor-nombre">
+                Proveedor Ejemplo
+              </h3>
+            </div>
+          </div>
+
+          <div class="proveedor">
+            <div class="proveedor-imagen">
+              <img src="https://picsum.photos/100/100?random=2" alt="Proveedor 2">
+            </div>
+
+            <div class="proveedor-info">
+              <p class="proveedor-descripcion">
+                Descripción breve del producto.
+              </p>
+
+              <h3 class="proveedor-nombre">
+                Otro Proveedor
+              </h3>
+            </div>
+          </div>
+
+          <div class="proveedor">
+            <div class="proveedor-imagen">
+              <img src="https://picsum.photos/100/100?random=3" alt="Proveedor 3">
+            </div>
+
+            <div class="proveedor-info">
+              <p class="proveedor-descripcion">
+                Descripción breve del producto.
+              </p>
+
+              <h3 class="proveedor-nombre">
+                Proveedor XYZ
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cntSectionDropIL">
+      <div>
+        <h2>Carga de informacion</h2>
+        <div class="cnt_iconDrop" id="iconCntDataLoadingDown">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-up">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M6 15l6 -6l6 6" />
+          </svg>
+        </div>
+        <div class="cnt_iconDrop cnt_iconDrop-noShow" id="iconCntDataLoadingUp">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M6 9l6 6l6 -6" />
+          </svg>
+        </div>
+      </div>
+      <div id="cntDataLoading" class="cntDataLoading">
+
+
+
+        <div class="formulario-panel">
+
+          <div class="formulario-header">
+            <h2>Formulario de ejemplo</h2>
+          </div>
+
+          <form class="formulario">
+
+            <!-- Input de texto -->
+            <div class="campo">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre">
+            </div>
+
+
+            <!-- Email -->
+            <div class="campo">
+              <label for="email">Correo electrónico</label>
+              <input type="email" id="email" name="email" placeholder="ejemplo@correo.com">
+            </div>
+
+
+            <!-- Password -->
+            <div class="campo">
+              <label for="password">Contraseña</label>
+              <input type="password" id="password" name="password" placeholder="Ingrese su contraseña">
+            </div>
+
+
+            <!-- Número -->
+            <div class="campo">
+              <label for="edad">Edad</label>
+              <input type="number" id="edad" name="edad" min="1" max="120" placeholder="Ingrese su edad">
+            </div>
+
+
+            <!-- Teléfono -->
+            <div class="campo">
+              <label for="telefono">Teléfono</label>
+              <input type="tel" id="telefono" name="telefono" placeholder="+54 9 11 1234-5678">
+            </div>
+
+
+            <!-- URL -->
+            <div class="campo">
+              <label for="sitio">Sitio web</label>
+              <input type="url" id="sitio" name="sitio" placeholder="https://www.ejemplo.com">
+            </div>
+
+
+            <!-- Fecha -->
+            <div class="campo">
+              <label for="fecha">Fecha</label>
+              <input type="date" id="fecha" name="fecha">
+            </div>
+
+
+            <!-- Hora -->
+            <div class="campo">
+              <label for="hora">Hora</label>
+              <input type="time" id="hora" name="hora">
+            </div>
+
+
+            <!-- Color -->
+            <div class="campo">
+              <label for="color">Color</label>
+
+              <div class="color-container">
+                <input type="color" id="color" name="color" value="#3498db">
+
+                <span>Seleccione un color</span>
+              </div>
+            </div>
+
+
+            <!-- Rango -->
+            <div class="campo">
+              <label for="rango">Nivel</label>
+
+              <div class="range-container">
+                <input type="range" id="rango" name="rango" min="0" max="100" value="50">
+
+                <span>50</span>
+              </div>
+            </div>
+
+
+            <!-- Select -->
+            <div class="campo">
+              <label for="pais">País</label>
+
+              <select id="pais" name="pais">
+                <option value="">Seleccione una opción</option>
+                <option value="argentina">Argentina</option>
+                <option value="brasil">Brasil</option>
+                <option value="chile">Chile</option>
+                <option value="uruguay">Uruguay</option>
+                <option value="paraguay">Paraguay</option>
+              </select>
+            </div>
+
+
+            <!-- Select múltiple -->
+            <div class="campo">
+              <label for="categorias">
+                Categorías
+              </label>
+
+              <select id="categorias" name="categorias" multiple>
+                <option value="tecnologia">Tecnología</option>
+                <option value="servicios">Servicios</option>
+                <option value="comercio">Comercio</option>
+                <option value="industria">Industria</option>
+                <option value="gastronomia">Gastronomía</option>
+              </select>
+
+              <small>
+                Puede seleccionar varias opciones.
+              </small>
+            </div>
+
+
+            <!-- Radio buttons -->
+            <div class="campo">
+
+              <label>Tipo de cliente</label>
+
+              <div class="radio-group">
+
+                <label class="radio-item">
+                  <input type="radio" name="tipo_cliente" value="particular" checked>
+                  <span>Particular</span>
+                </label>
+
+                <label class="radio-item">
+                  <input type="radio" name="tipo_cliente" value="empresa">
+                  <span>Empresa</span>
+                </label>
+
+                <label class="radio-item">
+                  <input type="radio" name="tipo_cliente" value="organizacion">
+                  <span>Organización</span>
+                </label>
+
+              </div>
+
+            </div>
+
+
+            <!-- Checkboxes -->
+            <div class="campo">
+
+              <label>Servicios de interés</label>
+
+              <div class="checkbox-group">
+
+                <label class="checkbox-item">
+                  <input type="checkbox" name="servicios" value="web">
+                  <span>Desarrollo web</span>
+                </label>
+
+                <label class="checkbox-item">
+                  <input type="checkbox" name="servicios" value="diseno">
+                  <span>Diseño</span>
+                </label>
+
+                <label class="checkbox-item">
+                  <input type="checkbox" name="servicios" value="marketing">
+                  <span>Marketing</span>
+                </label>
+
+                <label class="checkbox-item">
+                  <input type="checkbox" name="servicios" value="soporte">
+                  <span>Soporte técnico</span>
+                </label>
+
+              </div>
+
+            </div>
+
+
+            <!-- Textarea -->
+            <div class="campo">
+
+              <label for="descripcion">
+                Descripción
+              </label>
+
+              <textarea id="descripcion" name="descripcion" rows="6"
+                placeholder="Escriba aquí una descripción..."></textarea>
+
+            </div>
+
+
+            <!-- Archivo -->
+            <div class="campo">
+
+              <label for="archivo">
+                Archivo
+              </label>
+
+              <input type="file" id="archivo" name="archivo">
+
+            </div>
+
+
+
+            <!-- Botones -->
+            <div class="formulario-acciones">
+
+              <button type="reset" class="btn btn-secundario">
+                Limpiar
+              </button>
+
+              <button type="submit" class="btn btn-principal">
+                Guardar
+              </button>
+
+            </div>
+
+          </form>
+
+        </div>
+
+
+
+      </div>
+    </div>
+  </section>
+  <!--#endregion Secciones desplegables -->
+
+  <!--#region Pestañas -->
+  <aside class="side-menu">
+    <button class="side-tab" id="sideTab">
+      <span>Información</span>
+    </button>
+
+    <button class="side-tab">
+      <span>Galería</span>
+    </button>
+
+    <button class="side-tab">
+      <span>Contacto</span>
+    </button>
+
+    <button class="side-tab">
+      <span>Configuración</span>
+    </button>
+  </aside>
+  <!--#endregion Pestañas -->
+
+  <!--#region Ventana modal lateral -->
+    <!-- Ventana Modal Deslizante Vacia/Estructurada -->
+    <div id="sideModal" class="side-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <!-- Encabezado de la Modal -->
+      <div class="px-6 py-4 border-b border-slate-100 flex items-center justify-between bg-slate-50/50">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-window-maximize text-indigo-600"></i>
+          <h3 id="modalTitle" class="font-bold text-slate-800 text-lg">Ventana Lateral</h3>
+        </div>
+        <!-- Botón de Cierre 'X' -->
+        <button id="closeModalBtn"
+          class="w-9 h-9 flex items-center justify-center text-slate-400 hover:text-slate-700 hover:bg-slate-200/60 rounded-full transition"
+          aria-label="Cerrar modal">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+
+      <!-- Cuerpo Vacío de la Modal (Listo para rellenar con tu contenido) -->
+      <div class="p-6 flex-1 overflow-y-auto custom-scrollbar">
+        <!-- NOTA: La modal está vacía para que agregues tu propio contenido según los requerimientos -->
+        <div
+          class="h-full border-2 border-dashed border-slate-200 rounded-xl flex flex-col items-center justify-center p-8 text-center text-slate-400">
+          <i class="fa-regular fa-folder-open text-4xl mb-3 text-slate-300"></i>
+          <p class="font-medium text-slate-500">Área de Contenido Vacía</p>
+          <p class="text-sm text-slate-400 max-w-sm mt-1">Este espacio de 800px × 500px está listo para alojar
+            formularios, información, tablas o cualquier elemento que necesites.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit voluptatibus quaerat odio consectetur earum
+            unde praesentium quam cumque illum possimus, officia, voluptatem, repudiandae vitae quae in. Adipisci at
+            molestiae unde!</p>
+        </div>
+      </div>
+
+      <!-- Pie de Modal (Opcional) -->
+      <div class="px-6 py-3 border-t border-slate-100 bg-slate-50/50 flex justify-end gap-3">
+        <button id="closeModalFooterBtn" class="btnCloseModal">
+          Cerrar
+        </button>
+      </div>
+    </div>
+  <!--#endregion Ventana modal lateral -->
+
+  <script type="module" src="./js/index.js"></script>
+</body>
+</html>

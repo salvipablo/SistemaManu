@@ -1,0 +1,125 @@
+label {
+  display: block;
+  font-size: 20px;
+}
+
+input {
+  display: block;
+}
+
+/*#region header */
+  .mainTitle {
+    font-size: 28px;
+    font-weight: bold;
+  }
+/*#endregion header */
+
+/*#region frmLogin */
+  .inputs {
+    padding: 0.5em 0.2em;
+    border: solid 1px #6666d6;
+    background: transparent;
+    border-radius: 0.2em;
+    color: inherit;
+    width: 100%;
+  }
+
+  .btnLogin {
+    width: 98%;
+    padding: 0.8em 0;
+    border: solid 1px #6666d6;
+    background: #6666d6;
+    color: inherit;
+    border-radius: 0.2em;
+    box-shadow: 5px 4px 2px #706363;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    margin: auto;
+  }
+
+  .btnLogin:active {
+    background-color: #faebd7;
+    color: #1b1b72;
+  }
+
+  /* Estilos por media query mayor a 1440px */
+  @media (min-width: 1440px) {
+    .cntFrmLogin {
+      width: 500px;
+      margin: auto;
+    }
+  }
+/*#endregion frmLogin */
+
+/*#region modal window notice */
+  .cntModalWinNotice {
+    background-color: #5da2bd;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 10;
+    top: 16px;
+    left: 16px;
+    right: 16px;
+    border-radius: 10px;
+  }
+  
+  .cntModalWinNotice > div:nth-child(1) {
+    background-color: #cbedfa;
+    border-radius: 10px 10px 0 0;
+    color: #000000;
+    padding: 0.5em 0;
+  }
+
+  .cntModalWinNotice > div:nth-child(2) {
+    display: flex;
+    height: 220px;
+    padding: 1.5em 0.3em 1em 0.3em;
+  }
+
+  .cntModalWinNotice > div:nth-child(2) > div:nth-child(1) {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: antiquewhite;
+  }
+
+  .btnAccept {
+    width: 100%;
+    padding: 0.8em 0;
+    border: solid 1px #6666d6;
+    background: #6666d6;
+    color: #faebd7;
+    border-radius: 0.2em;
+    box-shadow: 5px 4px 2px #706363;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+
+  .cntModalWinNotice > div:nth-child(2) > div:nth-child(2) {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .imgModalWinNotice { width: 120px; }
+
+  .cntModalWinNotice-noShow { display: none; }
+
+  /* Estilos por media query mayor a 1440px */
+  @media (min-width: 1440px) {
+    .cntModalWinNotice {
+      width: 550px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .imgModalWinNotice { width: 150px; }
+  }
+
+/*#endregion modal window notice */
