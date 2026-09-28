@@ -7,8 +7,6 @@ const IconCntDataLoadingDown = document.getElementById('iconCntDataLoadingDown')
 const IconCntDataLoadingUp = document.getElementById('iconCntDataLoadingUp')
 
 
-
-
 const sideTab = document.getElementById('sideTab');
 const sideModal = document.getElementById('sideModal');
 const modalOverlay = document.getElementById('modalOverlay');
@@ -53,7 +51,7 @@ const openModalBtn = document.getElementById('openModalBtn');
     // Event Listeners para Cerrar
     closeModalBtn.addEventListener('click', closeModal);
     closeModalFooterBtn.addEventListener('click', closeModal);
-    modalOverlay.addEventListener('click', closeModal);
+    // modalOverlay.addEventListener('click', closeModal);
 
     // Cerrar la modal al presionar la tecla ESC
     document.addEventListener('keydown', (e) => {
@@ -88,7 +86,7 @@ function closeModal() {
 const UserLoggedIn = sessionStorage.getItem("userCons");
 
 if (!UserLoggedIn) location.assign("./login.html");
-// else console.log(UserLoggedIn);
+else console.log(UserLoggedIn);
 
 // window.onload = (event) => {
 //   console.log("page is fully loaded");
